@@ -8,6 +8,7 @@ import { CurrentDetails } from "./Components/CurrentDetails";
 import { WindSpeed } from "./Components/WindSpeed";
 import { HourlyForecast } from "./Components/HourlyForecast";
 import { DailyForecast } from "./Components/DailyForecast";
+import { DailyWeather } from "./Components/DailyWeather";
 
 export const App = () => {
   const { cityName, weatherData, error, handleChange, handleSubmit } =
@@ -71,6 +72,10 @@ export const App = () => {
           weatherData={weatherData}
           options={options}
         />
+        <DailyWeather styles={styles} weatherData={weatherData} />
+        <p className={styles.footer}>
+          Created by Ahmad Farhan Setiawan (Maddo)
+        </p>
       </Paper>
     </div>
   );

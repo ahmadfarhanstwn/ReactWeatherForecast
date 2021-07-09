@@ -23,6 +23,10 @@ export const useWeatherData = () => {
     hourlyWindSpeed: [],
     dailyTemperature: [],
     dailyDate: [],
+    dailyMinTemp: [],
+    dailyMaxTemp: [],
+    dailyWeatherIcon: [],
+    dailyRain: [],
   });
 
   const convertToCoordinate = () => {
@@ -70,6 +74,18 @@ export const useWeatherData = () => {
         dailyDate: data.daily.map((date) => {
           return moment.unix(date.dt).format("MMMM Do");
         }),
+        dailyMaxTemp: data.daily.map((date) => {
+          return date.temp.max;
+        }),
+        dailyMinTemp: data.daily.map((date) => {
+          return date.temp.min;
+        }),
+        dailyWeatherIcon: data.daily.map((date) => {
+          return date.weather[0].icon;
+        }),
+        dailyRain: data.daily.map((date) => {
+          return date.rain;
+        }),
       });
       setError(false);
     } catch (err) {
@@ -85,6 +101,7 @@ export const useWeatherData = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     convertToCoordinate();
+    // console.log(weatherData);
   };
 
   return { cityName, weatherData, error, handleChange, handleSubmit };

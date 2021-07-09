@@ -17,7 +17,7 @@ export const DailyForecast = ({ styles, weatherData, options }) => {
 
   return (
     <Paper className={styles.subPaper} elevation={3}>
-      <h1>Daily Forecast</h1>
+      <h1>Daily Temperature</h1>
       <Line className={styles.chart} data={state} options={options} />
     </Paper>
   );

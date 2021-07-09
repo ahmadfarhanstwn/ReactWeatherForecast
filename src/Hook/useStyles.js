@@ -37,8 +37,26 @@ export const useStyles = makeStyles(() => ({
     justifyContent: "space-between",
     overflow: "hidden",
     fontWeight: "bold",
+    textAlign: "center",
   },
   chart: {
     maxHeight: "250px",
+  },
+  dailyWeather: {
+    display: "flex",
+    justifyContent: "space-between",
+    textAlign: "center",
+    boxShadow: "#000",
+    "& div": {
+      flex: 1,
+      textAlign: "center",
+      borderRight: "1px solid #D3D3D3",
+    },
+    "& div:first-of-type": {
+      borderLeft: "1px solid #D3D3D3",
+    },
+  },
+  footer: {
+    textAlign: "center",
   },
 }));
