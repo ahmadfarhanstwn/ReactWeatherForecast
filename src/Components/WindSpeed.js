@@ -7,6 +7,7 @@ export const WindSpeed = ({ styles, weatherData, options }) => {
     labels: weatherData.hourlyHour,
     datasets: [
       {
+        label: "Wind Speed",
         backgroundColor: "rgba(75,192,192,1)",
         borderColor: "rgba(0,0,0,1)",
         borderWidth: 2,
@@ -18,7 +19,7 @@ export const WindSpeed = ({ styles, weatherData, options }) => {
   return (
     <Paper elevation={3} className={styles.subPaper}>
       <h1>Wind Speed</h1>
-      <h2 className={styles.windValue}>
+      <h2 className={styles.temperatureValue}>
         {weatherData.wind_speed ? weatherData.wind_speed : "---"} km/h
       </h2>
       <Bar className={styles.chart} data={state} options={options} />

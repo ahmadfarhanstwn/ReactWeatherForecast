@@ -21,12 +21,15 @@ export const useWeatherData = () => {
     hourlyTemperature: [],
     hourlyHour: [],
     hourlyWindSpeed: [],
+    hourlyFeelsLike: [],
+    hourlyIcon: [],
+    hourlyWeatherDesc: [],
     dailyTemperature: [],
     dailyDate: [],
     dailyMinTemp: [],
     dailyMaxTemp: [],
     dailyWeatherIcon: [],
-    dailyRain: [],
+    dailyWeatherDesc: [],
   });
 
   const convertToCoordinate = () => {
@@ -68,6 +71,15 @@ export const useWeatherData = () => {
         hourlyWindSpeed: data.hourly.slice(1, 25).map((hour) => {
           return (hour.wind_speed * 3.6).toFixed(2);
         }),
+        hourlyFeelsLike: data.hourly.slice(1, 25).map((hour) => {
+          return hour.feels_like;
+        }),
+        hourlyIcon: data.hourly.slice(1, 4).map((hour) => {
+          return hour.weather[0].icon;
+        }),
+        hourlyWeatherDesc: data.hourly.slice(1, 4).map((hour) => {
+          return hour.weather[0].description;
+        }),
         dailyTemperature: data.daily.map((dailyTemp) => {
           return dailyTemp.temp.day;
         }),
@@ -83,8 +95,8 @@ export const useWeatherData = () => {
         dailyWeatherIcon: data.daily.map((date) => {
           return date.weather[0].icon;
         }),
-        dailyRain: data.daily.map((date) => {
-          return date.rain;
+        dailyWeatherDesc: data.daily.map((date) => {
+          return date.weather[0].description;
         }),
       });
       setError(false);

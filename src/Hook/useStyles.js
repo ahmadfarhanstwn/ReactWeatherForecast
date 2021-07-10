@@ -14,8 +14,9 @@ export const useStyles = makeStyles(() => ({
   subPaper: {
     margin: "20px 0",
     padding: "20px",
-    background: "inherit",
-    backdropFilter: "blur(5px)",
+    backgroundColor: "#DEE4E7",
+    // background: "inherit",
+    // backdropFilter: "blur(5px)",
   },
   currentTemperature: {
     display: "flex",
@@ -25,6 +26,7 @@ export const useStyles = makeStyles(() => ({
   temperatureValue: {
     fontSize: "40px",
     color: "rgba(75,192,192,1)",
+    // WebkitTextStroke: "0.5px black",
   },
   windValue: {
     color: "rgba(75,192,192,1)",
@@ -37,7 +39,7 @@ export const useStyles = makeStyles(() => ({
     justifyContent: "space-between",
     overflow: "hidden",
     fontWeight: "bold",
-    textAlign: "center",
+    // textAlign: "center",
   },
   chart: {
     maxHeight: "250px",
@@ -56,7 +58,7 @@ export const useStyles = makeStyles(() => ({
       borderLeft: "1px solid #D3D3D3",
     },
   },
-  footer: {
-    textAlign: "center",
-  },
+  // footer: {
+  //   textAlign: "center",
+  // },
 }));
