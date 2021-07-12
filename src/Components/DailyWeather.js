@@ -13,7 +13,7 @@ export const DailyWeather = ({ styles, weatherData }) => {
               <h3>{weatherData.dailyMaxTemp[index]} °C</h3>
               <h4>{weatherData.dailyMinTemp[index]} °C</h4>
               <img
-                src={`http://openweathermap.org/img/wn/${weatherData.dailyWeatherIcon[index]}@2x.png`}
+                src={`https://openweathermap.org/img/wn/${weatherData.dailyWeatherIcon[index]}@2x.png`}
                 alt=""
               />
               <p>{weatherData.dailyWeatherDesc[index]}</p>
@@ -24,7 +24,7 @@ export const DailyWeather = ({ styles, weatherData }) => {
             <p>---</p>
             <h3>--- °C</h3>
             <h4>--- °C</h4>
-            <img src={"http://openweathermap.org/img/wn/03d@2x.png"} alt="" />
+            <img src={"https://openweathermap.org/img/wn/03d@2x.png"} alt="" />
             <p>---</p>
           </div>
         )}

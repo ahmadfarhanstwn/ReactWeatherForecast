@@ -22,8 +22,8 @@ export const CurrentTemperature = ({ styles, weatherData }) => {
           <img
             src={
               weatherData.weather_icon
-                ? `http://openweathermap.org/img/wn/${weatherData.weather_icon}@2x.png`
-                : "http://openweathermap.org/img/wn/03d@2x.png"
+                ? `https://openweathermap.org/img/wn/${weatherData.weather_icon}@2x.png`
+                : "https://openweathermap.org/img/wn/03d@2x.png"
             }
             alt="Current Weather Icon"
           />

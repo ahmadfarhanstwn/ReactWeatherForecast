@@ -13,7 +13,7 @@ export const HourlyWeather = ({ styles, weatherData }) => {
               <h2>{weatherData.hourlyTemperature[index]} °C</h2>
               <p>Feels like {weatherData.hourlyFeelsLike[index]} °C</p>
               <img
-                src={`http://openweathermap.org/img/wn/${weatherData.hourlyIcon[index]}@2x.png`}
+                src={`https://openweathermap.org/img/wn/${weatherData.hourlyIcon[index]}@2x.png`}
                 alt=""
               />
               <p>{weatherData.hourlyWeatherDesc[index]}</p>
@@ -24,7 +24,7 @@ export const HourlyWeather = ({ styles, weatherData }) => {
             <p>---</p>
             <h3>--- °C</h3>
             <h4>--- °C</h4>
-            <img src={"http://openweathermap.org/img/wn/03d@2x.png"} alt="" />
+            <img src={"https://openweathermap.org/img/wn/03d@2x.png"} alt="" />
             <p>---</p>
           </div>
         )}
