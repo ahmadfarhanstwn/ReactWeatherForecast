@@ -1,4 +1,4 @@
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = "2699449366656595e7314a32d3735e98";
 const baseUrl = "https://api.openweathermap.org/data/2.5";
 
 export const getLonLat = async (cityName) => {
